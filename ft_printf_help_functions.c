@@ -6,37 +6,13 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:07:13 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/16 19:32:06 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:42:22 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(int c)
-{
-	if (write(1, &c, 1)  == -1)
-		return (-1);
-	return (1);
-}
-
-int	ft_print_str(char *str)
-{
-	int	count;
-
-	count = 0;
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	while (*str != '\0')
-	{
-		if (ft_print_char((int) *str) == -1)
-			return (-1);
-		++count;
-		++str;
-	}
-	return (count);
-}
-
-int	chain_result(int* count, int parser_result)
+int	chain_result(int *count, int parser_result)
 {
 	if (parser_result == -1)
 		return (EXIT_FAILURE);
@@ -71,7 +47,6 @@ int	ft_print_digit(long n, int base, int small_big)
 		if (chain_result(&count, ft_print_digit(n / base, base, small_big)) || \
 			chain_result(&count, ft_print_digit(n % base, base, small_big)))
 			return (-1);
-		
 		return (count);
 	}
 }
@@ -85,7 +60,6 @@ int	ft_print_digit(long n, int base, int small_big)
 		// if (temp_count == -1)
 		// 	return (-1);
 		// count += temp_count;
-		
 int	ft_print_digit2(unsigned long n, unsigned long base, int small_big)
 {
 	int		count;
