@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:08:07 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/16 19:35:18 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:57:55 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ int		ft_print_str(char *str);
 int		ft_print_digit(long n, int base, int a);
 int		ft_print_p(void *data);
 int		ft_print_digit2(unsigned long n, unsigned long base, int small_big);
-// int		ft_print_digit2(unsigned long n, unsigned long base, int small_big);
 #endif //FT_PRINTF_H

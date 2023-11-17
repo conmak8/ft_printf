@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:07:13 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/17 14:42:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:32:22 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	ft_print_digit2(unsigned long n, unsigned long base, int small_big)
 	else
 	{
 		count = ft_print_digit(n / base, base, small_big);
-		return (count + ft_print_digit(n % base, base, small_big));
+		return (count + ft_print_digit2(n % base, base, small_big));
 	}
 }
 
