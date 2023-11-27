@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:26:47 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/17 16:41:20 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:41:00 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	ft_printf(const char *string, ...)
 		if (tmp == -1)
 			return (-1);
 		count += tmp;
-		++string;
+		string++;
 	}
 	va_end(args);
 	return (count);
