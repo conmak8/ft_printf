@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:07:13 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/27 15:02:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/27 15:12:42 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ int	ft_print_p(void *data)
 		return (write(1, "0x0", 3));
 	if (write(1, "0x", 2) == -1)
 		return (-1);
-	count = 2 + ft_print_digit2((unsigned long)data, 16, 0);
+	count = 2;
+	if (chain_result(&count, ft_print_digit2((unsigned long)data, 16, 0)))
+		return (-1);
 	return (count);
 }
